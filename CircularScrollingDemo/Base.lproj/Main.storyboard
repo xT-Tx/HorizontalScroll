@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CircularScrollingDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="77W-rz-iHa">
+                                <rect key="frame" x="173.5" y="133" width="181.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of pages:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3k-CZ-xZa">
+                                <rect key="frame" x="16" y="138" width="137.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ky0-WQ-WxL">
+                                <rect key="frame" x="172" y="279" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="GWk-ze-mac"/>
+                                </constraints>
+                                <state key="normal" title="Go"/>
+                                <connections>
+                                    <action selector="presentDemoVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CBc-bo-iJ2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ky0-WQ-WxL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3Zh-jx-aW3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="77W-rz-iHa" secondAttribute="trailing" constant="20" id="8hV-cY-sqV"/>
+                            <constraint firstItem="l3k-CZ-xZa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="PEe-hy-9ND"/>
+                            <constraint firstItem="Ky0-WQ-WxL" firstAttribute="top" secondItem="l3k-CZ-xZa" secondAttribute="bottom" constant="120" id="SLn-MD-alQ"/>
+                            <constraint firstItem="l3k-CZ-xZa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="118" id="Zjb-op-bGR"/>
+                            <constraint firstItem="77W-rz-iHa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="113" id="h4d-Gj-sBJ"/>
+                            <constraint firstItem="77W-rz-iHa" firstAttribute="leading" secondItem="l3k-CZ-xZa" secondAttribute="trailing" constant="20" id="jBR-hs-zl6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="77W-rz-iHa" id="AwM-TL-62f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="lRM-Lf-0aG" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="118.29085457271366"/>
+        </scene>
+        <!--Circular Scrolling Demo View Controller-->
+        <scene sceneID="MHL-jS-et4">
+            <objects>
+                <viewController storyboardIdentifier="DemoViewController" id="iry-ZN-n6m" customClass="CircularScrollingDemoViewController" customModule="CircularScrollingDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wga-s1-5Dq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qwS-Me-pd5" customClass="CircularScrollView" customModule="CircularScrollingDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="119" width="375" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="tsX-L8-HOm"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7G2-Ht-9sN">
+                                <rect key="frame" x="170" y="519" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="lRM-Lf-0aG" kind="unwind" unwindAction="goBackWithSegue:" id="Hck-dT-XBr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7G2-Ht-9sN" firstAttribute="top" secondItem="qwS-Me-pd5" secondAttribute="bottom" constant="50" id="DCh-YT-vBn"/>
+                            <constraint firstItem="qwS-Me-pd5" firstAttribute="top" secondItem="bce-zf-P27" secondAttribute="top" constant="99" id="HMs-QI-rv4"/>
+                            <constraint firstItem="7G2-Ht-9sN" firstAttribute="centerX" secondItem="bce-zf-P27" secondAttribute="centerX" id="VbX-lf-9Mj"/>
+                            <constraint firstItem="qwS-Me-pd5" firstAttribute="trailing" secondItem="bce-zf-P27" secondAttribute="trailing" id="xza-vI-BXy"/>
+                            <constraint firstItem="qwS-Me-pd5" firstAttribute="leading" secondItem="bce-zf-P27" secondAttribute="leading" id="y0d-gj-57B"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bce-zf-P27"/>
+                    </view>
+                    <connections>
+                        <outlet property="cScrollView" destination="qwS-Me-pd5" id="vJ9-H5-BDV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OX4-fl-iox" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="905" y="118"/>
+        </scene>
+    </scenes>
+</document>
