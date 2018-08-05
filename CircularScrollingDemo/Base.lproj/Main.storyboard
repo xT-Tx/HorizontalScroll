@@ -40,20 +40,35 @@
                                     <action selector="presentDemoVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CBc-bo-iJ2"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XsW-gA-Mxe">
+                                <rect key="frame" x="206" y="191" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable paging:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eX6-nV-hfI">
+                                <rect key="frame" x="16" y="191" width="142" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Ky0-WQ-WxL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3Zh-jx-aW3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="77W-rz-iHa" secondAttribute="trailing" constant="20" id="8hV-cY-sqV"/>
+                            <constraint firstItem="XsW-gA-Mxe" firstAttribute="top" secondItem="77W-rz-iHa" secondAttribute="bottom" constant="28" id="Gzy-oB-6CQ"/>
+                            <constraint firstItem="eX6-nV-hfI" firstAttribute="top" secondItem="l3k-CZ-xZa" secondAttribute="bottom" constant="32" id="Oqs-5c-dVQ"/>
                             <constraint firstItem="l3k-CZ-xZa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="PEe-hy-9ND"/>
                             <constraint firstItem="Ky0-WQ-WxL" firstAttribute="top" secondItem="l3k-CZ-xZa" secondAttribute="bottom" constant="120" id="SLn-MD-alQ"/>
                             <constraint firstItem="l3k-CZ-xZa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="118" id="Zjb-op-bGR"/>
+                            <constraint firstItem="eX6-nV-hfI" firstAttribute="leading" secondItem="l3k-CZ-xZa" secondAttribute="leading" id="bnQ-pz-hb8"/>
                             <constraint firstItem="77W-rz-iHa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="113" id="h4d-Gj-sBJ"/>
                             <constraint firstItem="77W-rz-iHa" firstAttribute="leading" secondItem="l3k-CZ-xZa" secondAttribute="trailing" constant="20" id="jBR-hs-zl6"/>
+                            <constraint firstItem="XsW-gA-Mxe" firstAttribute="leading" secondItem="eX6-nV-hfI" secondAttribute="trailing" constant="48" id="pHF-v9-3FX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XsW-gA-Mxe" secondAttribute="trailing" constant="120" id="znv-uQ-hZ3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="pagingToggleSwitch" destination="XsW-gA-Mxe" id="yBa-0h-BYN"/>
                         <outlet property="textField" destination="77W-rz-iHa" id="AwM-TL-62f"/>
                     </connections>
                 </viewController>

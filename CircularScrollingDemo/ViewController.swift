@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var textField: UITextField!
+    @IBOutlet var pagingToggleSwitch: UISwitch!
     
     @IBAction func presentDemoVC(_ sender: Any) {
         guard let number = textField.text, !number.isEmpty else { return }
@@ -18,6 +19,7 @@ class ViewController: UIViewController {
         
         let numberOfCards = Int(number) ?? 1
         demoVC.numberOfCards = numberOfCards
+        demoVC.pagingEnabled = pagingToggleSwitch.isOn
         present(demoVC, animated: true, completion: nil)
     }
     
